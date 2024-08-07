@@ -22,10 +22,10 @@ function ContactMe({}: Props) {
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left  
     md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center scroll-smooth">
-        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-xl md:text-2xl">
             Contact Me
         </h3>
-        <div className=" flex flex-col space-y-10">
+        <div className=" flex flex-col space-y-10 mt-20 md:mt-0">
             <h4 className="text-4xl font-semibold text-center">We deliver. <span className="underline decoration-[#25D366]/50"> Lets Talk.</span> </h4>
 
             <div className=" space-y-5">

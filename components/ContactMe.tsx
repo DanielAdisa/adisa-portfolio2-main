@@ -25,30 +25,38 @@ function ContactMe({}: Props) {
         <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
             Contact Me
         </h3>
-        <div className=" flex flex-col space-y-10 cursor-not-allowed">
-            <h4 className="text-4xl font-semibold text-center">I{"'"}m H.I.M, I deliver. <span className="underline decoration-[#25D366]/50"> Lets Talk.</span> </h4>
+        <div className=" flex flex-col space-y-10">
+            <h4 className="text-4xl font-semibold text-center">We deliver. <span className="underline decoration-[#25D366]/50"> Lets Talk.</span> </h4>
 
             <div className=" space-y-5">
                 <div className=" flex items-center space-x-5 justify-center">
+                    <Link href={"tel:+2348037956920"}>
                     <PhoneArrowUpRightIcon className=" text-[#25D366] h-7 w-7 animate-pulse"/>
-                    <p className="text-2xl">+2348037956920</p>
+                    </Link>
+                    <Link href={"tel:+2349166423642"}>
+                    <p className="text-2xl">Call Me</p>
+                    </Link>
                 </div>
 
                 <div className=" flex items-center space-x-5 justify-center">
+                    <Link href={"mailto:adisadaniel4@gmail.com"}>
                     <EnvelopeIcon className=" text-[#25D366] h-7 w-7 animate-ping"/>
+                    </Link>
+                    <Link href={"mailto:adisadaniel4@gmail.com"}>
                     <p className="text-2xl">adisadaniel4@gmail.com</p>
+                    </Link>
                 </div>
 
                 <div className=" flex items-center space-x-5 justify-center">
                     <MapPinIcon className=" text-[#25D366] h-7 w-7 animate-pulse"/>
-                    <p className="text-2xl">Abuja, Nigeria</p>
+                    <p className="text-2xl">Nigeria</p>
                 </div>
 
                 
             </div>
 
-            <form className="flex flex-col space-y-2 w-fit mx-auto" onSubmit={handleSubmit(onSubmit)}>
-                <div className=" flex space-x-2">
+            <form className="flex flex-col space-y-2 w-full mx-auto" onSubmit={handleSubmit(onSubmit)}>
+                <div className=" flex md:flex-row flex-col md:space-y-0 space-y-2 md:space-x-2 ">
                     <input {...register('name')} className="contactInput" type="text" placeholder="Name" />
                     <input {...register('email')} className="contactInput" type="email" placeholder="Email" />
                 </div>  

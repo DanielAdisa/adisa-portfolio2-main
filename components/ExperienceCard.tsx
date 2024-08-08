@@ -11,7 +11,7 @@ type Props = {
 
 export default function ExperienceCard({experience}: Props) {
   return (
-    <article className='flex flex-col rounded-l space-y-7 flex-shrink-0 w-[350px] h-[80vh] md:w-[600px] md:h-[820px] xl:w-[800px] snap-center mt-20 bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+    <article className='flex flex-col rounded-l space-y-7 flex-shrink-0 w-[350px] h-[80vh] md:w-[600px] md:h-[820px] xl:w-[800px] snap-center mt-20 bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-y-scroll'>
         <motion.div
         initial={{y:-100, opacity:0,}}
         transition={{duration:1.2}}
@@ -46,7 +46,7 @@ export default function ExperienceCard({experience}: Props) {
                 }
 
             </p>
-            <ol className='px-0 md:px-10 font-mono  md:text-lg list-disc space-y-4 ml-5 max-w-90 pr-10 text-lg max-h-100 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#25D366]/80'>
+            <ol className='px-0 md:px-10 font-mono  md:text-lg list-disc space-y-4 ml-5 max-w-90 pr-10 text-lg max-h-100 overflow-y-hidden scrollbar-thin scrollbar-track-black scrollbar-thumb-[#25D366]/80'>
                 {experience.points.map((point, i) =>(
                     <li key={i}>{point}</li>
                 ))}

@@ -49,7 +49,7 @@ export default function Hero({pageInfo}: Props) {
             <h1 className=' text-5xl lg:text-6xl font-semibold px-10'> <span className='mr-3'> {text} <Cursor cursorColor='#25D366'/> </span> 
            
             </h1>
-            <div className=' pt-5 md:space-x-5'>
+            <div className=' space-x-2 md:space-x-5 pt-24 -mb-20 '>
                 <Link href="#about">
 
                 <button className='heroButton'>About</button>
@@ -70,7 +70,7 @@ export default function Hero({pageInfo}: Props) {
                 
                 <Link href="#projects">
 
-                <button className='heroButton'>Projects</button>
+                <button className='heroButton mt-3'>Projects</button>
                 
                 </Link>
                 

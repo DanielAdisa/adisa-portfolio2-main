@@ -26,8 +26,8 @@ export default function ExperienceCard({experience}: Props) {
             />
         </motion.div>
         <div className='px-0 md:px-5'>
-            <h4 className='md:text-4xl text-2xl font-bold'>{experience?.jobTitle}</h4>
-            <p className=' text-2xl mt-1 font-light'>{experience?.company}</p>
+            <h4 className='md:text-4xl text-2xl font-light'>{experience?.jobTitle}{" @"}</h4>
+            <p className=' text-sm md:text-lg mt-1 font-bold'>{experience?.company} </p>
             <div className=' flex space-x-2 my-2'>
                 {experience.technologies.map(technology =>(
                     <Image src={urlFor(technology.image).url()}
@@ -46,9 +46,9 @@ export default function ExperienceCard({experience}: Props) {
                 }
 
             </p>
-            <ol className='px-0 md:px-5 font-mono  md:text-lg list-disc space-y-4 ml-5 max-w-90 pr-10 text-lg max-h-100 overflow-y-hidden scrollbar-thin scrollbar-track-black scrollbar-thumb-[#25D366]/80'>
+            <ol className='px-0 md:px-5 font-mono list-item md:text-lg space-y-4 ml-5 max-w-90 pr-10 text-lg max-h-100 overflow-y-hidden scrollbar-thin scrollbar-track-black scrollbar-thumb-[#25D366]/80'>
                 {experience.points.map((point, i) =>(
-                    <li key={i}>{point}</li>
+                    <li key={i} className=' text-sm md:text-lg '>{point}</li>
                 ))}
 
             </ol>

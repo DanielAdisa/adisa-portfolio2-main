@@ -73,6 +73,13 @@ export default function Hero({pageInfo}: Props) {
                 <button className='heroButton mt-3'>Projects</button>
                 
                 </Link>
+
+                
+                <Link href="#contactme">
+
+                <button className='heroButton mt-3'>Contacts</button>
+                
+                </Link>
                 
     
 

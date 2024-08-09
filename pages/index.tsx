@@ -7,6 +7,7 @@ import About from "@/components/About";
 import WorkExperience from "@/components/WorkExperience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import ContactMe from "@/components/ContactMe";
 import { GetStaticProps } from "next";
 import { Experience, PageInfo, Project, Skill, Social } from "@/typings";
@@ -15,6 +16,8 @@ import { fetchExperiences } from "@/utils/fetchExperience";
 import { fetchSkills } from "@/utils/fetchSkills";
 import { fetchProjects } from "@/utils/fetchProjects";
 import { fetchSocials } from "@/utils/fetchSocials";
+import Link from "next/link";
+import { LinkIcon } from "@heroicons/react/20/solid";
 
 type Props = {
   pageInfo: PageInfo;
@@ -24,9 +27,15 @@ type Props = {
   socials: Social[];
 }
 
+const handleScrollToTop = () =>
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  })
 
 
 export default function Home({ pageInfo,experiences,skills,projects,socials}: Props) {
+  
   return (
     <div className=" bg-[#363636] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#25D366]/80"> 
 
@@ -60,7 +69,20 @@ export default function Home({ pageInfo,experiences,skills,projects,socials}: Pr
       <section id="contactme" className="snap-start">
         <ContactMe/>
       </section>
+      <Link href="#hero">
+        <footer className="sticky bottom-16 md:bottom-2 w-full cursor-pointer ">
+          <div className="flex items-center justify-center">
+          <BsFillArrowUpCircleFill
+            className=" text-darkGreen/100 bg-[#3f3f3f]animate-bounce md:w-14 md:h-14 h-10 w-10 bottom-2 cursor-pointer animate-bounce
+            "
+            onClick={handleScrollToTop}
+          />
+          </div>
+        </footer>
+      </Link>
     </div>
+
+    
   );
 }
 

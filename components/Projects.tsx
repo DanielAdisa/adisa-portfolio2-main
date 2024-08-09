@@ -39,6 +39,18 @@ export default function Projects({projects}: Props) {
                 <h4 className=' text-4xl font-semibold text-center'>
                   <span className=' underline decoration-[#25D366]/50'>Case Study {i+1} of {projects.length} :{" "}{project?.title}</span>
                 </h4>
+                <div className="flex items-center space-x-2 justify-center ">
+                {project?.technologies.map((technology) => (
+                  <Image
+                    key={technology._id}
+                    className="rounded-full h-10 w-10"
+                    src={urlFor(technology?.image).url()}
+                    alt=""
+                    height={500}
+                    width={500}
+                  />
+                ))}
+              </div>
                 <p className=' text-lg text-center md:text-left mt-5'> {project?.summary} </p>
               </div>
             </motion.div>

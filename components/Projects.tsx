@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import React from 'react';
 import { motion } from "framer-motion";
@@ -30,7 +31,7 @@ export default function Projects({projects}: Props) {
                 height={3264}
                 width={2448}
                 alt='Mine'
-                className=' w-full h-full md:h-[40vh] md:w-full lg:h-[40vh] lg:w-[full] object-cover object-top'
+                className=' w-full h-[60vh] md:h-[40vh] md:w-full lg:h-[40vh] lg:w-[full] object-cover object-top'
                 />
             </motion.div>
     
@@ -44,6 +45,12 @@ export default function Projects({projects}: Props) {
         <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
           {project?.summary}
         </p>
+        {/* <Link href={project?.linkToBuild} className="">
+                  {project?.title}
+                  <span className="uppercase tracking-wide font-semibold border-y-2 text-xs ml-5 text">
+                    Take me to Build
+                  </span>
+                </Link> */}
       </div>
         </article>
           ))}

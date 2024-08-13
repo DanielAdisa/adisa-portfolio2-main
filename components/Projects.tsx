@@ -20,12 +20,6 @@ export default function Projects({projects}: Props) {
           {projects?.map((project, i) => (
             <article className='flex rounded-lg border border-gray-100  dark:border-[#25D366]/30 p3 flex-col rounded-l shadow-2xl space-y-7 flex-shrink-0 w-[350px] h-[680px] md:w-[600px] md:h-[820px] xl:w-[800px] snap-center mt-20 bg-[#292929] p-4 hover:opacity-100 opacity-20 cursor-pointer transition-opacity duration-200 overflow-hidden'>
 
-        
-            {/*
-      Heads up! 👋
-    
-      This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
-    */}
     <motion.div
             initial={{y:-100, opacity:0,}}
             transition={{duration:1.2}}
@@ -39,11 +33,6 @@ export default function Projects({projects}: Props) {
                 className=' w-full h-full md:h-[40vh] md:w-full lg:h-[40vh] lg:w-[full] object-cover object-top'
                 />
             </motion.div>
-      {/* <img
-        alt=""
-        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-        className="h-[70%] w-full object-cover"
-      /> */}
     
       <div className="p-4 sm:p-6">
         <a href="#">
@@ -58,17 +47,6 @@ export default function Projects({projects}: Props) {
           mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque
           dignissimos. Molestias explicabo corporis voluptatem?
         </p>
-    
-    <Link href={"project?.linkToBuild"}>
-    Link to the project.
-    </Link>
-        {/* <a href={project?.linkToBuild} className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#25D366]/50 ani">
-          Link to Project.
-    
-          <span aria-hidden="true" className="block transition-all group-hover:ms-0.5 rtl:rotate-180">
-            &rarr;
-          </span>
-        </a> */}
       </div>
         </article>
           ))}

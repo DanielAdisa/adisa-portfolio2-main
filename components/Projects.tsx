@@ -31,7 +31,7 @@ export default function Projects({projects}: Props) {
                 height={3264}
                 width={2448}
                 alt='Mine'
-                className=' w-full h-[60vh] md:h-[40vh] md:w-full lg:h-[40vh] lg:w-[full] object-cover object-top'
+                className=' w-full h-full md:h-[40vh] md:w-full lg:h-[40vh] lg:w-[full] object-cover object-top'
                 />
             </motion.div>
     

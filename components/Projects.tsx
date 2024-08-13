@@ -18,7 +18,7 @@ export default function Projects({projects}: Props) {
         </h3>
         <div className=' relative  overflow-y-hidden y z-20  scrollbar-thumb-[#25D366]/80  w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#25D366]/8'>
           {projects?.map((project, i) => (
-            <article className='flex rounded-lg border border-gray-100  dark:border-[#25D366]/30 p3 flex-col rounded-l shadow-2xl space-y-7 flex-shrink-0 w-[350px] h-[680px] md:w-[600px] md:h-[820px] xl:w-[800px] snap-center mt-20 bg-[#292929] p-4 hover:opacity-100 opacity-20 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+            <article className='flex rounded-lg border border-gray-100  dark:border-[#25D366]/30 p3 flex-col rounded-l space-y-7 flex-shrink-0 w-[350px] h-[680px] md:w-[600px] md:h-[820px] xl:w-[800px] snap-center mt-20 bg-[#292929] p-4 shadow-2xl cursor-pointer transition-opacity duration-200 overflow-hidden'>
 
     <motion.div
             initial={{y:-100, opacity:0,}}
@@ -42,10 +42,7 @@ export default function Projects({projects}: Props) {
         </a>
     
         <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus
-          pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem,
-          mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque
-          dignissimos. Molestias explicabo corporis voluptatem?
+          {project?.summary}
         </p>
       </div>
         </article>

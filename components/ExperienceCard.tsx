@@ -11,7 +11,7 @@ type Props = {
 
 export default function ExperienceCard({experience}: Props) {
   return (
-    <article className='flex flex-col rounded-lg space-y-7 flex-shrink-0 w-[35vh] h-[80vh] md:w-[600px] md:h-[820px] xl:w-[800px] snap-center mt-20 bg-[#292929] p-8 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#25D366]/80'>
+    <article className='flex flex-col rounded-lg space-y-7 flex-shrink-0 w-[35vh] h-[80vh] md:w-[600px] md:h-[70vh] xl:w-[800px] xl:h-[] snap-center mt-20 bg-[#292929] p-8 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#25D366]/80'>
         <motion.div
         initial={{y:-100, opacity:0,}}
         transition={{duration:1.2}}

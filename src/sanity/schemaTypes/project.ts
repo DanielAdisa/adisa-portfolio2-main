@@ -33,7 +33,7 @@ export const project = defineType({
     {
       name: 'linktoBuild',
       title: 'LinktoBuild',
-      type: 'url',
+      type: 'string',
     },
   ],
 })

@@ -19,7 +19,7 @@ export default function Projects({projects}: Props) {
         </h3>
         <div className=' relative  overflow-y-hidden y z-20  scrollbar-thumb-[#25D366]/80  w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#25D366]/8'>
           {projects?.map((project, i) => (
-            <article key={project._id} className='flex rounded-lg border border-gray-100  dark:border-[#25D366]/30 p3 flex-col rounded-l space-y-7 flex-shrink-0 w-[350px] h-[680px] md:w-[600px] md:h-[820px] xl:w-[800px] snap-center mt-20 bg-[#292929] p-4 shadow-2xl cursor-pointer transition-opacity duration-200 overflow-hidden'>
+            <article key={project._id} className='flex rounded-lg border border-gray-100 h-fit dark:border-[#25D366]/30 p3 flex-col rounded-l space-y-7 flex-shrink-0 w-[350px] md:w-[600px] md:h-[820px] xl:w-[800px] snap-center mt-20 bg-[#292929] p-4 shadow-2xl cursor-pointer transition-opacity duration-200 overflow-hidden'>
 
     <motion.div
             initial={{y:-100, opacity:0,}}
@@ -31,7 +31,7 @@ export default function Projects({projects}: Props) {
                 height={3264}
                 width={2448}
                 alt='Mine'
-                className=' w-full h-full md:h-[40vh] md:w-full lg:h-[40vh] lg:w-[full] object-cover object-top'
+                className=' w-fit h-fit md:h-[40vh] md:w-full lg:h-[40vh] lg:w-[full] object-cover object-top'
                 />
             </motion.div>
     
@@ -45,12 +45,6 @@ export default function Projects({projects}: Props) {
         <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
           {project?.summary}
         </p>
-        {/* <Link href={project?.linkToBuild} className="">
-                  {project?.title}
-                  <span className="uppercase tracking-wide font-semibold border-y-2 text-xs ml-5 text">
-                    Take me to Build
-                  </span>
-                </Link> */}
       </div>
         </article>
           ))}

@@ -1,3 +1,4 @@
+"use client";
 
 import Image from 'next/image';
 import React from 'react';
@@ -34,17 +35,32 @@ export default function Projects({projects}: Props) {
                 className=' w-fit h-fit md:h-[40vh] md:w-full lg:h-[40vh] lg:w-[full] object-cover object-top'
                 />
             </motion.div>
+            <div className="flex items-center space-x-3">
+                {project?.technologies.map((technology) => (
+                  <Image
+                    key={technology._id}
+                    className="rounded-full object-cover"
+                    src={urlFor(technology?.image).url()}
+                    alt=""
+                    height={30}
+                    width={30}
+                  />
+                ))}
+              </div>
     
-      <div className="p-4 sm:p-6">
-        <a href="#">
+      <div className="p-4 sm:p-6 pt">
           <h3 className="text-lg font-medium text-gray-900 dark:text-white">
             {project?.title}
           </h3>
-        </a>
+          
     
         <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
           {project?.summary}
         </p>
+        
+      <Link href={project.linktoBuild} className=' text-sm text-[#25D366] font-mono'>
+      <button className="bg-[#25D366]/90 pt-2 pr-4 pl-4 pb-2 mt-4 rounded-md text-white font-mono" type="submit"><span className=" font-mono">Link To Project</span></button>
+        </Link>
       </div>
         </article>
           ))}

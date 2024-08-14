@@ -18,9 +18,9 @@ export default function Projects({projects}: Props) {
         <h3  className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
             Projects
         </h3>
-        <div className=' relative  overflow-y-hidden y z-20  scrollbar-thumb-[#25D366]/80  w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#25D366]/8'>
+        <div className=' relative  overflow-y-hidden y z-20  scrollbar-thumb-[#25D366]/80  w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#25D366]/8 '>
           {projects?.map((project, i) => (
-            <article key={project._id} className='flex rounded-lg border border-gray-100 h-fit dark:border-[#25D366]/30 p3 flex-col rounded-l space-y-7 flex-shrink-0 w-[350px] md:w-[600px] md:h-[820px] xl:w-[800px] snap-center mt-20 bg-[#292929] p-4 shadow-2xl cursor-pointer transition-opacity duration-200 overflow-hidden'>
+            <article key={project._id} className='flex rounded-lg border border-gray-100 h-fit dark:border-[#25D366]/30 p3 flex-col rounded-l space-y-7 flex-shrink-0 w-[350px] xl:h-fit md:w-[600px] md:h-fit xl:w-[800px] snap-center mt-20 bg-[#292929] p-4 shadow-2xl cursor-pointer transition-opacity duration-200 overflow-hidden'>
 
     <motion.div
             initial={{y:-100, opacity:0,}}
@@ -32,7 +32,7 @@ export default function Projects({projects}: Props) {
                 height={3264}
                 width={2448}
                 alt='Mine'
-                className=' w-fit h-fit md:h-[40vh] md:w-full lg:h-[40vh] lg:w-[full] object-cover object-top'
+                className=' w-fit h-fit md:h-[40vh] md:w-full rounded-md lg:h-[40vh] shadow-2xl lg:w-[full] object-cover object-top'
                 />
             </motion.div>
             <div className="flex items-center space-x-3">
@@ -48,18 +48,18 @@ export default function Projects({projects}: Props) {
                 ))}
               </div>
     
-      <div className="p-4 sm:p-6 pt">
-          <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+      <div className="p-4 sm:p-6 pt text-center">
+          <h3 className="text-lg font-medium text-gray-900 dark:text-white underline ">
             {project?.title}
           </h3>
           
     
-        <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
+        <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400 text-left">
           {project?.summary}
         </p>
         
       <Link href={project.linktoBuild} className=' text-sm text-[#25D366] font-mono'>
-      <button className="bg-[#25D366]/90 pt-2 pr-4 pl-4 pb-2 mt-4 rounded-md text-white font-mono" type="submit"><span className=" font-mono">Link To Project</span></button>
+      <button className="bg-[#25D366]/90 pt-2 pr-4 pl-4 pb-2 mt-4 rounded-md text-white w-full font-mono" type="submit"><span className=" font-mono">Link To Project</span></button>
         </Link>
       </div>
         </article>

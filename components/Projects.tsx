@@ -49,7 +49,7 @@ export default function Projects({projects}: Props) {
               </div>
     
       <div className="p-4 sm:p-6 pt text-center">
-          <h3 className="text-lg font-medium text-gray-900 dark:text-white underline ">
+          <h3 className="text-lg font-medium text-gray-900 dark:text-white underline">
             {project?.title}
           </h3>
           

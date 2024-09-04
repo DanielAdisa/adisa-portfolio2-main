@@ -33,7 +33,7 @@ export default function About({pageInfo}: Props) {
           className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-[4/5] rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
         >
           <Image  className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] mt-5'
-            src={urlFor(pageInfo?.profilePic).url()}
+            src={urlFor(pageInfo?.heroImage).url()}
             height={3264}
             width={2448}
             alt='Mine'/>
